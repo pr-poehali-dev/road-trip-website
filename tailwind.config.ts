@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
@@ -8,7 +9,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-  ],
+	],
   prefix: "",
   theme: {
     container: {
@@ -19,6 +20,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        sans: ["Roboto", ...fontFamily.sans],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,15 +62,18 @@ const config = {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
           border: "hsl(var(--sidebar-border))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           ring: "hsl(var(--sidebar-ring))",
+          accent: "hsl(var(--sidebar-accent))",
+          'accent-foreground': "hsl(var(--sidebar-accent-foreground))",
+          primary: "hsl(var(--sidebar-primary))",
+          'primary-foreground': "hsl(var(--sidebar-primary-foreground))",
         },
         gold: {
           DEFAULT: "#D4B254",
-          light: "#F4D584",
-          dark: "#B4922F"
-        }
+          light: "#E5CB7D", 
+          dark: "#B89539"
+        },
+        'safety-bg': 'rgba(10, 10, 10, 0.8)',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -82,27 +90,19 @@ const config = {
           to: { height: "0" },
         },
         "slide-in": {
-          "0%": { transform: "translateY(20px)", opacity: "0" },
-          "100%": { transform: "translateY(0)", opacity: "1" }
+          from: { transform: "translateY(30px)", opacity: "0" },
+          to: { transform: "translateY(0)", opacity: "1" },
         },
-        "fade-in": {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" }
-        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "slide-in": "slide-in 0.5s ease-out",
-        "fade-in": "fade-in 0.8s ease-out"
-      },
-      fontFamily: {
-        'playfair': ['"Playfair Display"', 'serif'],
+        "slide-in": "slide-in 0.8s ease-out forwards",
       },
       backgroundImage: {
         'hero-pattern': "url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2942&auto=format&fit=crop')",
-        'safety-bg': "url('https://images.unsplash.com/photo-1531884070720-875c7622687d?q=80&w=2787&auto=format&fit=crop')",
-      },
+        'safety-pattern': "url('https://images.unsplash.com/photo-1536489885071-87983c3e2859?q=80&w=2070&auto=format&fit=crop')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],

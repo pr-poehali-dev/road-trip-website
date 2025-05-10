@@ -19,7 +19,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Star, User, Quote } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 const testimonials = [
   {
@@ -145,62 +145,60 @@ const TestimonialsSection = () => {
                 Написать отзыв
               </Button>
             </DialogTrigger>
-            <Dialog>
-              <DialogContent className="sm:max-w-[525px]">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-playfair">Написать отзыв</DialogTitle>
-                  <DialogDescription>
-                    Поделитесь своими впечатлениями о путешествии с нами
-                  </DialogDescription>
-                </DialogHeader>
-                <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-                  <div className="grid grid-cols-1 gap-4">
-                    <div className="space-y-2">
-                      <label htmlFor="name" className="text-sm font-medium">
-                        Ваше имя
-                      </label>
-                      <Input
-                        id="name"
-                        placeholder="Имя Фамилия"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="tourName" className="text-sm font-medium">
-                        Название тура
-                      </label>
-                      <Input
-                        id="tourName"
-                        placeholder="Например: Золотое кольцо России"
-                        value={tourName}
-                        onChange={(e) => setTourName(e.target.value)}
-                        required
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="review" className="text-sm font-medium">
-                        Ваш отзыв
-                      </label>
-                      <Textarea
-                        id="review"
-                        placeholder="Поделитесь вашими впечатлениями о путешествии..."
-                        value={review}
-                        onChange={(e) => setReview(e.target.value)}
-                        required
-                        rows={5}
-                      />
-                    </div>
+            <DialogContent className="sm:max-w-[525px]">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-playfair">Написать отзыв</DialogTitle>
+                <DialogDescription>
+                  Поделитесь своими впечатлениями о путешествии с нами
+                </DialogDescription>
+              </DialogHeader>
+              <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium">
+                      Ваше имя
+                    </label>
+                    <Input
+                      id="name"
+                      placeholder="Имя Фамилия"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
                   </div>
-                  <div className="flex justify-end">
-                    <Button type="submit" className="bg-gold hover:bg-gold-dark text-secondary">
-                      Отправить отзыв
-                    </Button>
+                  <div className="space-y-2">
+                    <label htmlFor="tourName" className="text-sm font-medium">
+                      Название тура
+                    </label>
+                    <Input
+                      id="tourName"
+                      placeholder="Например: Золотое кольцо России"
+                      value={tourName}
+                      onChange={(e) => setTourName(e.target.value)}
+                      required
+                    />
                   </div>
-                </form>
-              </DialogContent>
-            </Dialog>
+                  <div className="space-y-2">
+                    <label htmlFor="review" className="text-sm font-medium">
+                      Ваш отзыв
+                    </label>
+                    <Textarea
+                      id="review"
+                      placeholder="Поделитесь вашими впечатлениями о путешествии..."
+                      value={review}
+                      onChange={(e) => setReview(e.target.value)}
+                      required
+                      rows={5}
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                  <Button type="submit" className="bg-gold hover:bg-gold-dark text-secondary">
+                    Отправить отзыв
+                  </Button>
+                </div>
+              </form>
+            </DialogContent>
           </Dialog>
         </div>
       </div>
