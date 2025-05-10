@@ -1,19 +1,9 @@
 
-<svg width="180" height="48" viewBox="0 0 180 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M32 24C32 29.5228 27.5228 34 22 34H12C6.47715 34 2 29.5228 2 24C2 18.4772 6.47715 14 12 14H22C27.5228 14 32 18.4772 32 24Z" fill="#D4B254"/>
-  <path d="M46 24C46 29.5228 41.5228 34 36 34H26C20.4772 34 16 29.5228 16 24C16 18.4772 20.4772 14 26 14H36C41.5228 14 46 18.4772 46 24Z" fill="#D4B254" fill-opacity="0.8"/>
-  <path d="M60 24C60 29.5228 55.5228 34 50 34H40C34.4772 34 30 29.5228 30 24C30 18.4772 34.4772 14 40 14H50C55.5228 14 60 18.4772 60 24Z" fill="#D4B254" fill-opacity="0.6"/>
-  <path d="M68 18V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M72 22C72 20.3431 73.3431 19 75 19H79C80.6569 19 82 20.3431 82 22V26C82 27.6569 80.6569 29 79 29H75C73.3431 29 72 27.6569 72 26V22Z" stroke="white" stroke-width="2"/>
-  <path d="M89 18L89 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M89 18.0001C89 18.0001 94 16 94 24C94 32 89 30 89 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M101 18V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M101 24H109" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M114 24C114 20.6863 116.686 18 120 18V18C123.314 18 126 20.6863 126 24V24C126 27.3137 123.314 30 120 30V30C116.686 30 114 27.3137 114 24V24Z" stroke="white" stroke-width="2"/>
-  <path d="M130 18L140 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M140 18L130 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M149 29V19C149 19 149 18 150 18C151 18 153 18 154 18C155 18 155 19 155 19V29" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M165 18L155 24L165 30" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M170 18V30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M170 24H178" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M20 10L25 40H35L40 10H20Z" fill="#D4AF37"/>
+  <path d="M45 10L50 40H60L65 10H45Z" fill="#D4AF37"/>
+  <path d="M10 45H75V50H10V45Z" fill="#D4AF37"/>
+  <path d="M85 18H95C98.3137 18 101 20.6863 101 24V36C101 39.3137 98.3137 42 95 42H85V18Z" fill="#D4AF37"/>
+  <path d="M105 18H125V24H110V27H122V32H110V36H125V42H105V18Z" fill="#D4AF37"/>
+  <text x="85" y="50" font-family="Arial" font-size="8" fill="#D4AF37">Автопутешествия</text>
 </svg>

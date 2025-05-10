@@ -1,6 +1,5 @@
 
-import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+import type { Config } from "tailwindcss"
 
 const config = {
   darkMode: ["class"],
@@ -20,10 +19,6 @@ const config = {
       },
     },
     extend: {
-      fontFamily: {
-        playfair: ['Playfair Display', 'serif'],
-        sans: ["Roboto", ...fontFamily.sans],
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -62,18 +57,20 @@ const config = {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
           border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-          accent: "hsl(var(--sidebar-accent))",
-          'accent-foreground': "hsl(var(--sidebar-accent-foreground))",
           primary: "hsl(var(--sidebar-primary))",
-          'primary-foreground': "hsl(var(--sidebar-primary-foreground))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
+          ring: "hsl(var(--sidebar-ring))",
         },
         gold: {
-          DEFAULT: "#D4B254",
-          light: "#E5CB7D", 
-          dark: "#B89539"
+          DEFAULT: "#D4AF37",
+          dark: "#B8860B",
+          light: "#FFD700",
         },
-        'safety-bg': 'rgba(10, 10, 10, 0.8)',
+      },
+      backgroundImage: {
+        'safety-bg': "url('https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=2070&auto=format&fit=crop')",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -90,22 +87,21 @@ const config = {
           to: { height: "0" },
         },
         "slide-in": {
-          from: { transform: "translateY(30px)", opacity: "0" },
-          to: { transform: "translateY(0)", opacity: "1" },
-        },
+          "0%": { transform: "translateY(20px)", opacity: "0" },
+          "100%": { transform: "translateY(0)", opacity: "1" },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-in": "slide-in 0.8s ease-out forwards",
       },
-      backgroundImage: {
-        'hero-pattern': "url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=2942&auto=format&fit=crop')",
-        'safety-pattern': "url('https://images.unsplash.com/photo-1536489885071-87983c3e2859?q=80&w=2070&auto=format&fit=crop')",
-      }
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography')],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config

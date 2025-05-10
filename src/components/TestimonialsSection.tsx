@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Star, User, Quote } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const testimonials = [
@@ -62,22 +62,22 @@ const TestimonialsSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // In a real app, you would send this data to your backend
+    // В реальном приложении вы бы отправили данные на сервер
     console.log({ name, tourName, review });
     
-    // Show success message
+    // Показать сообщение об успехе
     toast({
       title: "Отзыв отправлен",
       description: "Спасибо за ваш отзыв! Он будет опубликован после модерации.",
       duration: 5000,
     });
     
-    // Reset form
+    // Сбросить форму
     setName("");
     setTourName("");
     setReview("");
     
-    // Close dialog
+    // Закрыть диалог
     setIsDialogOpen(false);
   };
 
